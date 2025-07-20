@@ -1,0 +1,148 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 2rem var(--container-padding);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--rounded-lg);
+  
+  /* New multi-layered gradient background */
+  background-color: var(--color-bg);
+  background-image: 
+    radial-gradient(at 15% 85%, hsla(262, 83%, 59%, 0.2) 0px, transparent 50%),
+    radial-gradient(at 85% 15%, hsla(217, 89%, 61%, 0.2) 0px, transparent 50%);
+}
+
+/* The overlay is no longer needed with this gradient approach */
+/* .homeContainer::before { ... } */
+
+.heroSection, .quizForm {
+  position: relative;
+  z-index: 2;
+}
+
+.heroSection {
+  max-width: 650px;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, var(--color-text-primary), #d1d5db);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+}
+
+.quizForm {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: rgba(31, 41, 55, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: var(--rounded-lg);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.input, .select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--rounded-md);
+  color: var(--color-text-primary);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus, .select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(138, 92, 254, 0.3);
+}
+
+.input:disabled, .select:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.5rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--rounded-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+  box-shadow: var(--shadow-glow);
+}
+
+.submitButton:hover:not(:disabled) {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px 0 rgba(138, 92, 254, 0.4);
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+  background-color: var(--color-border);
+  box-shadow: none;
+  transform: none;
+}
+
+.errorMessage {
+  color: var(--color-error);
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--color-error);
+  padding: 0.75rem;
+  border-radius: var(--rounded-md);
+  text-align: center;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loaderIcon {
+  animation: spin 1s linear infinite;
+  margin-right: 0.5rem;
+}

@@ -1,0 +1,105 @@
+.historyContainer {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contentArea {
+  background-color: var(--color-surface);
+  border-radius: var(--rounded-lg);
+  padding: 2rem;
+  min-height: 400px;
+  border: 1px solid var(--color-border);
+}
+
+.centeredMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.centeredMessage p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.errorIcon { color: var(--color-error); }
+.emptyIcon { color: var(--color-primary); }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loaderIcon {
+  animation: spin 1s linear infinite;
+  color: var(--color-primary);
+}
+
+.historyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* New style for the link wrapper */
+.historyLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+.historyItem {
+  background-color: var(--color-bg);
+  padding: 1.5rem;
+  border-radius: var(--rounded-md);
+  border: 1px solid var(--color-border);
+  transition: all 0.2s ease-in-out;
+}
+
+.historyItem:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-primary);
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.itemTopic {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-transform: capitalize;
+}
+
+.itemDate {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+.itemScore {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.itemScore span {
+  font-weight: 600;
+  color: var(--color-secondary);
+}

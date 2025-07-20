@@ -1,0 +1,145 @@
+.detailContainer {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.backButton:hover {
+  color: var(--color-primary);
+}
+
+.header {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--color-surface);
+  border-radius: var(--rounded-lg);
+  margin-bottom: 2rem;
+  border: 1px solid var(--color-border);
+}
+
+.topic {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-transform: capitalize;
+}
+
+.date {
+  color: var(--color-text-secondary);
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.scoreSummary {
+  font-size: 1.25rem;
+  color: var(--color-text-primary);
+}
+
+.scoreSummary span {
+  font-weight: 700;
+  color: var(--color-secondary);
+}
+
+.reviewSection {
+  background-color: var(--color-surface);
+  padding: 2rem;
+  border-radius: var(--rounded-lg);
+  border: 1px solid var(--color-border);
+}
+
+.reviewTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.answerList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.answerItem {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1.5rem;
+}
+.answerItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.questionHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.questionText {
+  font-weight: 500;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+}
+
+.correctIcon { color: var(--color-success); flex-shrink: 0; }
+.incorrectIcon { color: var(--color-error); flex-shrink: 0; }
+
+.answerDetails {
+  padding-left: 2.25rem; /* Aligns with question text */
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.correctText {
+  color: var(--color-success);
+  font-weight: 500;
+}
+
+.incorrectText {
+  color: var(--color-error);
+  font-weight: 500;
+}
+
+/* Styles for loading/error states */
+.centeredMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.centeredMessage p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.errorIcon { color: var(--color-error); }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loaderIcon {
+  animation: spin 1s linear infinite;
+  color: var(--color-primary);
+}
